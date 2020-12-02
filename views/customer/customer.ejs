@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Product List</title>
+</head>
+<body>
+	<h1> Product List</h1>
+
+	<br>
+	<a href="/customer/index">Back</a> || <a href="/customer/product/male">Male Category</a> || <a>Female Category</a>  || <a href="/customer/cartlist">Cart List</a> || <a href="/logout">Log out</a> 
+
+	<table border="1">
+		<tr>
+			<td>Serial</td>
+			<td>Id</td>
+			<td>Title</td>
+			<td>Description</td>
+			<td>Price</td>
+            <td>Size</td>
+            <td>Category</td>
+			<td>Type</td>
+		</tr>
+		
+		
+
+		<% productlist.forEach( function(product,i){ %>
+			
+			<tr>
+				<td><%= i+1 %></td>
+				<td><%= product.id %></td>
+				<td><%= product.name %></td>
+				<td><%= product.description %></td>
+				<td id="price"><%= product.price %></td>
+                <td><%= product.size %></td>
+                <td><%= product.category %></td>
+				<td><%= product.type %></td>
+				
+                <td><a href="product/cart/<%= product.id%>">Add To Cart</a> </td>
+                
+                <!-- /uhome/purchase/-->
+				
+				
+	
+			</tr>
+		<%
+			}); 
+		%>
+
+	</table>
+	<a href="">Back</a> || <a href="/logout">Log out</a></a>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script>
+/*$('#price, #quantity').on('input',function(){
+    var price = parseFloat($('#price').val()) || 0;
+    var quantity = parseFloat($('#quantity').val()) || 0;
+    $('#amount').val(price * quantity);    
+});*/
+$(document).ready(function(){
+	$("#cart[i]").click(function(){
+		if($("#quantity").val()===''){
+			alert('Quntity fill required');
+		}
+		else{
+			alert('OK');
+		}
+	});
+});
+</script>
+</html

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+<title>Bootstrap Sign up Form Horizontal</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- Bootstrap core CSS -->
+<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+<link href="assets/css/shop-homepage.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+<style>
+	body {
+		color: #999;
+		background: #f3f3f3;
+		font-family: 'Roboto', sans-serif;
+	}
+    .form-control {
+		border-color: #eee;
+        min-height: 41px;
+		box-shadow: none !important;
+	}
+    .form-control:focus {
+		border-color: #343A40;
+	}
+    .form-control, .btn {        
+        border-radius: 3px;
+    }
+	.signup-form {
+		width: 500px;
+		margin: 0 auto;
+		padding: 30px 0;
+	}
+    .signup-form h2 {
+		color: #333;
+        margin: 0 0 30px 0;
+		display: inline-block;
+		padding: 0 30px 10px 0;
+		border-bottom: 3px solid#343A40;
+    }
+    .signup-form form {
+		color: #999;
+		border-radius: 3px;
+    	margin-bottom: 15px;
+        background: #fff;
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+        padding: 30px;
+    }
+	.signup-form .form-group {
+		margin-bottom: 20px;
+	}
+	.signup-form label {
+		font-weight: normal;
+		font-size: 13px;
+	}
+    .signup-form input[type="checkbox"] {
+		margin-top: 2px;
+	}
+    .signup-form .btn {        
+        font-size: 16px;
+        font-weight: bold;
+		background: #343A40;
+		border: none;
+		margin-top: 20px;
+		min-width: 140px;
+    }
+	.signup-form .btn:hover, .signup-form .btn:focus {
+		background: #343A40;
+        outline: none !important;
+	}
+    .signup-form a {
+		color:#343A40;
+		text-decoration: underline;
+	}
+	.signup-form a:hover {
+		text-decoration: none;
+	}
+    .signup-form form a {
+		color: #343A40;
+		text-decoration: none;
+	}	
+	.signup-form form a:hover {
+		text-decoration: underline;
+    }
+    
+    #sec{
+        height: 87vh;
+    }
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="#"><h1>Breeze</h1></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+    
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Home
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+              
+              <!-- <li class="nav-item">
+                <a class="nav-link" href="test.html">Login</a>
+              </li>  -->
+    
+    
+    
+            </ul>
+          </div>
+        </div>
+</nav>
+
+<section id="sec">
+
+<div class="signup-form">
+    <form  method="post" class="form-horizontal">
+		<div class="col-xs-8 col-xs-offset-4">
+			<h2>Sign Up</h2>
+		</div>		
+        <div class="form-group">
+            <label class="control-label col-xs-4">Email Address</label>
+			<div class="col-xs-8">
+                <input type="email" class="form-control" name="email" required="required">
+            </div>      	
+        </div>
+		<div class="form-group">
+            <label class="control-label col-xs-4">Name</label>
+			<div class="col-xs-8">
+                <input type="text" class="form-control" name="name" required="required">
+            </div>       	
+        </div>
+        <div class="form-group">
+            <label class="control-label col-xs-4">Phone</label>
+			<div class="col-xs-8">
+                <input type="text" class="form-control" name="phone" required="required">
+            </div>       	
+        </div>
+        <div class="form-group">
+            <label class="control-label col-xs-4">Adress</label>
+			<div class="col-xs-8">
+                <input type="text" class="form-control" name="address" required="required">
+            </div>       	
+        </div>
+        <div class="form-group">
+           
+            <div class="col-xs-8">
+              <select name="gender">
+                <option name="gender" value="" >Gender</option>
+                <option name="gender" value="Male">Male</option>
+                <option  name="gender" value="Female">Female</option>
+
+            </select>
+            </div>   	
+        </div>
+		<div class="form-group">
+			<label class="control-label col-xs-4">Password</label>
+			<div class="col-xs-8">
+                <input type="password" class="form-control" name="password" required="required">
+            </div>        	
+        </div>
+		<!-- <div class="form-group">
+			<label class="control-label col-xs-4">Confirm Password</label>
+			<div class="col-xs-8">
+                <input type="password" class="form-control" name="confirm_password" required="required">
+            </div>        	
+        </div> -->
+		<div class="form-group">
+			<div class="col-xs-8 col-xs-offset-4">
+				<!-- <p><label class="checkbox-inline"><input type="checkbox" required="required"> I accept the <a href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a>.</label></p> -->
+				<button type="submit" class="btn btn-primary btn-lg">Sign Up</button>
+			</div>  
+		</div>		      
+    </form>
+	<div class="text-center">Already have an account? <a href="/login">Login here</a></div>
+</div>
+
+</section>
+
+ <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

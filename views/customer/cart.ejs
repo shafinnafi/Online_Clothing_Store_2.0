@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit</title>
+</head>
+<body>
+	<form method="post">
+    <fieldset>
+        <table>
+            <legend>Edit product</legend>
+                        <tr>
+                            <td> Product ID</td>
+                            <td><input type="text" name="id" value="<%= id %>" readonly></td>
+                        </tr>
+                        <tr>
+                            <td>Title</td>
+                            <td><input type="text" name="name" value="<%= name %>" readonly></td>
+                        </tr>
+                        <tr>
+                            <td>Description</td>
+                            <td><input type="text" name="description" value="<%= description %>" readonly></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>Size</td>
+                            <td><input type="text" name="size" value="<%= size %>" readonly></td>
+                        </tr>
+                        <tr>
+                            <td>Category</td>
+                            <td><input type="text" name="category" value="<%= category %>"readonly></td>
+                        </tr>
+                        <tr>
+                            <td>Type:</td>
+                            <td><input type="text" name="type" value="<%= type %>" readonly></td>
+                        </tr>
+                        <tr>
+                            <td>Price:</td>
+                            <td><input type="text" id="price" name="price" value="<%= price %>" readonly></td>
+                        </tr>
+                        <tr>
+                            <td>Quantity</td>
+                            <td><input type="text" id="quantity" name="quantity"></td>
+                        </tr>
+                        
+                        <tr>
+                            <td>Total Amount:</td>
+                            <td><input type="text" id="tprice" name="tprice" value="" readonly></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input type="submit" name="submit" value="Checkout">|| <a href="">Back</a></td>
+                        </tr>
+                    </table>
+                </fieldset>
+	</form>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script>
+$('#price, #quantity').on('input',function(){
+    var price = parseInt($('#price').val());
+    var quantity = parseInt($('#quantity').val());
+
+    $('#tprice').val(price * quantity);    
+});
+</script>
+</html>
